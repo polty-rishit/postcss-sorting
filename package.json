@@ -26,9 +26,10 @@
 		"postcss": "^8.4.20"
 	},
 	"devDependencies": {
-		"eslint": "^8.31.0",
-		"eslint-config-hudochenkov": "^9.0.0",
-		"eslint-config-prettier": "^8.6.0",
+		"eslint": "^8.57.1",
+		"eslint-config-hudochenkov": "^10.0.2",
+		"eslint-config-prettier": "^9.1.0",
+		"globals": "^15.12.0",
 		"husky": "^9.1.6",
 		"jest": "^29.7.0",
 		"jest-watch-typeahead": "^2.2.2",
@@ -44,12 +45,12 @@
 		"test": "jest",
 		"watch": "jest --watch",
 		"coverage": "jest --coverage",
-		"fix": "eslint *.js 'lib/**/*.js' --max-warnings 0 --fix && prettier --write *.js 'lib/**/*.js'",
-		"lint": "eslint *.js 'lib/**/*.js' --max-warnings 0 && prettier --check *.js 'lib/**/*.js'",
+		"fix": "eslint '*.{js,mjs}' 'lib/**/*.js' --max-warnings 0 --fix && prettier --write '*.{js,mjs}' 'lib/**/*.js'",
+		"lint": "eslint '*.{js,mjs}' 'lib/**/*.js' --max-warnings 0 && prettier --check '*.{js,mjs}' 'lib/**/*.js'",
 		"prepare": "husky"
 	},
 	"lint-staged": {
-		"*.js": [
+		"*.{js,mjs}": [
 			"eslint --fix --max-warnings=0",
 			"prettier --write"
 		]

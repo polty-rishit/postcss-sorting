@@ -4,7 +4,7 @@ const getContainingNode = require('./lib/getContainingNode');
 const sortNode = require('./lib/order/sortNode');
 const sortNodeProperties = require('./lib/properties-order/sortNodeProperties');
 
-module.exports = (opts) => {
+module.exports = function postcssSorting(opts) {
 	return {
 		postcssPlugin: 'postcss-sorting',
 		Root(css) {
