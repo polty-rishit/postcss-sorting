@@ -44,13 +44,13 @@ global.runTest = function runTest(input, opts, dirname) {
 
 	try {
 		inputCSS = fs.readFileSync(inputPath, 'utf8');
-	} catch (error) {
+	} catch {
 		fs.writeFileSync(inputPath, inputCSS);
 	}
 
 	try {
 		expectCSS = fs.readFileSync(expectPath, 'utf8');
-	} catch (error) {
+	} catch {
 		fs.writeFileSync(expectPath, expectCSS);
 	}
 
