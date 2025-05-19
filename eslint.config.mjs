@@ -10,6 +10,7 @@ export default [
 	eslintConfigPrettier,
 	{
 		languageOptions: {
+			// this need to be rectfied and treated
 			globals: {
 				...Object.fromEntries(Object.entries(globals.browser).map(([key]) => [key, 'off'])),
 				...globals.node,

@@ -29,7 +29,7 @@ function plugin(css, opts) {
 			throw new Error(`postcss-sorting: Invalid config.`);
 		} else {
 			// eslint-disable-next-line no-console
-			if (console && console.warn && isString(validatedOptions)) {
+			if (console.log && console.warn && isString(validatedOptions)) {
 				console.warn(validatedOptions); // eslint-disable-line no-console
 			}
 
